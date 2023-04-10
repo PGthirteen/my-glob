@@ -9,6 +9,18 @@ import GlobalLayout from "C:\\Users\\Administrator\\Desktop\\新建文件夹\\�
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-1b484072",
+    path: "/articles/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1b484072").then(next)
+    },
+  },
+  {
+    path: "/articles/index.html",
+    redirect: "/articles/"
+  },
+  {
     name: "v-3ab3a4c4",
     path: "/",
     component: GlobalLayout,
@@ -19,6 +31,42 @@ export const routes = [
   {
     path: "/index.html",
     redirect: "/"
+  },
+  {
+    name: "v-392fc167",
+    path: "/learning/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-392fc167").then(next)
+    },
+  },
+  {
+    path: "/learning/index.html",
+    redirect: "/learning/"
+  },
+  {
+    name: "v-a7db56f2",
+    path: "/practice/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-a7db56f2").then(next)
+    },
+  },
+  {
+    path: "/practice/index.html",
+    redirect: "/practice/"
+  },
+  {
+    name: "v-d0920232",
+    path: "/together/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-d0920232").then(next)
+    },
+  },
+  {
+    path: "/together/index.html",
+    redirect: "/together/"
   },
   {
     path: '*',
